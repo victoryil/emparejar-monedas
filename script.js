@@ -106,7 +106,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }());
     }
 
-    // Ejemplo de uso: Llamar a la función createConfetti() para mostrar el efecto de confeti
+    function createChildishBackground() {
+
+
+        particlesJS.load('particles-js', 'assets/particles.json', function() {
+            console.log('callback - particles.js config loaded');
+          });
+      }
+      
+      // Ejemplo de uso: Llamar a la función createChildishBackground() para crear un fondo bonito e infantil
+      createChildishBackground();
+      
 
 
 });
