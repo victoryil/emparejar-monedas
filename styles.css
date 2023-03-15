@@ -1,0 +1,75 @@
+/* styles.css */
+* {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F9F9F9;
+
+}
+
+h1 {
+  text-align: center;
+  color: #4F81BD;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.game {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.card {
+  width: 10em;
+  height: 10em;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.back {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card:hover {
+  background-color: #879d9f;
+            box-shadow: 0px 0px 8px rgba(13, 14, 14, 0.254);
+}
+.number-card {
+  width: 150px;
+  height: 150px;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.number-card:hover {
+  background-color: #50a6b0;
+            box-shadow: 0px 0px 8px rgba(13, 14, 14, 0.254);
+}
+.unclickable {
+  pointer-events: none;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+}

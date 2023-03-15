@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Emparejar Monedas y Billetes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    
+    <audio id="error" preload="auto">
+        <source src="audio/error.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    <audio id="victoria" preload="auto">
+        <source src="audio/victoria.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    <audio id="acierto" preload="auto">
+        <source src="audio/acierto.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+      <div id="confetti-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+
+    <h1>Juego de Emparejar Monedas y Billetes</h1>
+    <div class="container">
+        <div class="game cards">
+            <div style="background-image: url('monedas/5_e.svg');" class="card card-billete back" data-value="5e"></div>
+            <div style="background-image: url('monedas/2_e.svg');" class="card back" data-value="2e"></div>
+            <div style="background-image: url('monedas/20_e.svg');" class="card card-billete back" data-value="20e">
+            </div>
+            <div style="background-image: url('monedas/10_e.svg');" class="card card-billete back" data-value="10e">
+            </div>
+            <div style="background-image: url('monedas/1_e.svg');" class="card back" data-value="1e"></div>
+            <div style="background-image: url('monedas/1_c.svg');" class="card back" data-value="1c"></div>
+            <div style="background-image: url('monedas/2_c.svg');" class="card back" data-value="2c"></div>
+            <div style="background-image: url('monedas/10_c.svg');" class="card back" data-value="10c"></div>
+            <div style="background-image: url('monedas/20_c.svg');" class="card back" data-value="20c"></div>
+            <div style="background-image: url('monedas/5_c.svg');" class="card back" data-value="5c"></div>
+            <div style="background-image: url('monedas/50_c.svg');" class="card back" data-value="50c"></div>
+            <div style="background-image: url('monedas/50_e.svg');" class="card back" data-value="50e"></div>
+            <!-- Agrega más tarjetas aquí -->
+        </div>
+
+        <div class="game points">
+            <div class="number-card" data-value="1e">Un euro</div>
+            <div class="number-card" data-value="2e">Dos euros</div>
+            <div class="number-card" data-value="5e">Cinco euros</div>
+            <div class="number-card" data-value="10e">Diez euros</div>
+            <div class="number-card" data-value="20e">Veinte euros</div>
+            <div class="number-card" data-value="50e">Cincuenta euros</div>
+            <div class="number-card" data-value="1c">Un centimo</div>
+            <div class="number-card" data-value="2c">Dos centimos</div>
+            <div class="number-card" data-value="5c">Cinco centimos</div>
+            <div class="number-card" data-value="10c">Diez centimos</div>
+            <div class="number-card" data-value="20c">Veinte centimos</div>
+            <div class="number-card" data-value="50c">Cincuenta centimos</div>
+            <!-- Agrega más tarjetas aquí -->
+        </div>
+        <div class="number-cards">
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
