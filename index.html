@@ -34,7 +34,7 @@
 
     <h1>Juego de Emparejar Monedas y Billetes</h1>
     <div class="container">
-        <div class="game cards">
+        <div  id="cards-container" class="game cards">
             <div style="background-image: url('monedas/5_e.svg');" class="card card-billete back" data-value="5e"></div>
             <div style="background-image: url('monedas/2_e.svg');" class="card back" data-value="2e"></div>
             <div style="background-image: url('monedas/20_e.svg');" class="card card-billete back" data-value="20e">
@@ -52,7 +52,7 @@
             <!-- Agrega más tarjetas aquí -->
         </div>
 
-        <div class="game points">
+        <div class="game points" id="points-container">
             <div class="number-card" data-value="1e">Un euro</div>
             <div class="number-card" data-value="2e">Dos euros</div>
             <div class="number-card" data-value="5e">Cinco euros</div>
@@ -65,11 +65,13 @@
             <div class="number-card" data-value="10c">Diez centimos</div>
             <div class="number-card" data-value="20c">Veinte centimos</div>
             <div class="number-card" data-value="50c">Cincuenta centimos</div>
-            <!-- Agrega más tarjetas aquí -->
         </div>
-        <div class="number-cards">
-
-        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <h2>Felicidades, ganaste!</h2>
+              <button id="restart">Jugar de nuevo</button>
+            </div>
+          </div>
     </div>
     <footer>
         Realizado por Laura Rodriguez Sedeño, 2023©.

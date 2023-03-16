@@ -2,12 +2,34 @@
 //
 
 document.addEventListener('DOMContentLoaded', () => {
+    const cardContainer = document.getElementById('cards-container');
+    const pointsContainer = document.getElementById('points-container');
     const cards = document.querySelectorAll('.card');
     const values = document.querySelectorAll('.number-card');
     let selectedCard = null;
     let selectedValue = null;
     let count = 0;
 
+    let itemsArray = Array.from(cards);
+
+    shuffleArray(itemsArray);
+
+    cardContainer.innerHTML = '';
+    itemsArray.forEach(item => cardContainer.appendChild(item));
+
+    itemsArray = Array.from(values);
+
+    shuffleArray(itemsArray);
+
+    pointsContainer.innerHTML = '';
+    itemsArray.forEach(item => pointsContainer.appendChild(item));
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
     function playJoyfulSound(id) {
         const audioElement = document.getElementById(id);
         audioElement.play();
@@ -65,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (count == 12) {
             playJoyfulSound('victoria');
             createConfetti();
+            showModal();
         }
     }
     function createConfetti() {
@@ -75,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         const container = document.getElementById('confetti-container');
-        container.style.zIndex = 999
+        container.style.zIndex = 99
   const canvas = document.createElement('canvas');
   container.appendChild(canvas);
         var myConfetti = confetti.create(canvas, {
@@ -117,6 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // Ejemplo de uso: Llamar a la función createChildishBackground() para crear un fondo bonito e infantil
       createChildishBackground();
       
-
-
+      function showModal() {
+        const modal = document.getElementById("modal");
+        modal.style.zIndex = 100
+        modal.style.display = "block";
+      }
+      document.getElementById("restart").addEventListener("click", () => {
+        location.reload();
+      });
 });
